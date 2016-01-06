@@ -52,7 +52,7 @@
         }
     }
 
-    angular.module("productManagement")
+    angular.module("app.productManagement")
         .controller("app.ProductListCtrl", ProductListCtrl);
 
 }

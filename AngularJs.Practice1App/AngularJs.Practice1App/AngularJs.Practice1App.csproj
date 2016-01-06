@@ -816,6 +816,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="app\products\productListCtrl.ts" />
+    <TypeScriptCompile Include="common\services\common.services.ts" />
+    <TypeScriptCompile Include="common\services\productResources.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
@@ -850,7 +852,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\prices\" />
-    <Folder Include="common\services\" />
     <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>

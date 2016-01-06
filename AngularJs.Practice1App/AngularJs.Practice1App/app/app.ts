@@ -3,5 +3,5 @@ namespace app {
 
     "use strict";
 
-    angular.module("productManagement", []);    
+    angular.module("app.productManagement", ["app.common.services"]);    
 }
