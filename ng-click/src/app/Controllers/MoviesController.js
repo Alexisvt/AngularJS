@@ -1,4 +1,4 @@
-export class MainController {
+export class MoviesController {
   constructor() {
     this.likesList = [];
     this.favorites = [

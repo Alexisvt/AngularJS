@@ -1,7 +1,7 @@
 import './styles/site.css';
 import angular from 'angular';
-import { MainController } from './Controllers/MainController';
+import { MoviesController } from './Controllers/MoviesController';
 
 const app = angular
   .module('gemStore', [])
-  .controller('MainController', MainController);
+  .controller(MoviesController.name, MoviesController);
