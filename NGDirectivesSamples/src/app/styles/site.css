@@ -1,0 +1,19 @@
+#movieList {
+  color: black;
+}
+
+.old {
+  background: red;
+}
+
+.modern {
+  background: blue;
+}
+
+.new {
+  background: green;
+}
+
+a {
+  color: blue;
+}

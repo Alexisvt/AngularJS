@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-gv0oNvwnqzF6ULI9TVsSmnULNb3zasNysvWwfT/s4l8k5I+g6oFz9dye0wg3rQ2Q"
+    crossorigin="anonymous">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+  <div class="container">
+    <div ng-controller="MoviesController as movie">
+      <h1>List of movies</h1>
+      <ul id="movieList">
+        <li ng-class="{
+          old: favorite.year < 1995,
+          modern: favorite.year > 1995 && favorite.year < 2000,
+          new: favorite.year > 2000
+        }" ng-repeat="favorite in movie.favorities">
+          <p>
+            <img ng-src="http://lorempixel.com/70/100/"> Name:
+            <a ng-href="http://lorempixel.com/70/100/">{{favorite.title}}</a>
+          </p>
+          <p>Release date: {{favorite.year}}</p>
+          <input type="text" ng-model="favorite.year" />
+          <p ng-if="favorite.popular">This movie is popular!</p>
+          <p ng-if="favorite.year >= 2000">This movie is quite new!</p>
+          <div ng-switch="favorite.category">
+            <p ng-switch-when="action">Action movie</p>
+            <p ng-switch-when="thriller">Thriller movie</p>
+            <p ng-switch-when="fantasy">Fantasy movie</p>
+            <p ng-switch-default>without category</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

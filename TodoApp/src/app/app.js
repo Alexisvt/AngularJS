@@ -1,6 +1,9 @@
-import angular from 'angular';
-import { MainController } from './Controllers/MainController';
+import './styles/site.css';
 
+import angular from 'angular';
+import { TodoController } from './Controllers/TodoController';
+
+//eslint-disable-next-line
 const app = angular
-  .module('gemStore', [])
-  .controller('MainController', MainController);
+  .module('app', [])
+  .controller(TodoController.name, TodoController);
